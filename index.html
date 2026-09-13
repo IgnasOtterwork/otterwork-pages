@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otter Work — Predictive parts availability for truck workshops</title>
+  <meta name="description" content="Otter Work is an AI decision layer that predicts the spare parts a repair will need before the truck reaches the workshop bay — cutting downtime and lifting bay throughput." />
+  <meta property="og:title" content="Otter Work — Predictive parts availability" />
+  <meta property="og:description" content="Predict, source and stage the right parts before the truck reaches the bay." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://otterwork.app" />
+  <meta name="theme-color" content="#2E5A4B" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================ Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="lockup" href="#top" aria-label="Otter Work home">
+        <img src="assets/img/otter.svg" alt="" />
+        <span class="name">Otter Work</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#value">Value</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#founders">Team</a>
+        <a class="btn btn-primary" href="#contact">Request a pilot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ========================================================== Hero -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Predictive parts availability platform</span>
+          <h1>Making vehicle repair faster and&nbsp;more predictable</h1>
+          <p class="lede">
+            Otter Work is an AI decision layer that diagnoses vehicles and
+            <strong>predicts the spare parts a repair will need — before the truck reaches the
+            workshop bay.</strong> Higher technician efficiency, higher throughput, less downtime.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#contact">Request a pilot</a>
+            <a class="btn btn-secondary" href="#solution">See how it works</a>
+          </div>
+          <p class="hero-note">Built for independent truck workshops and multi-location service networks across Europe.</p>
+        </div>
+
+        <!-- Order dossier mock -->
+        <aside class="dossier" aria-label="Example predicted repair order">
+          <div class="doc-head">
+            <span class="ono">RO&nbsp;24-0817</span>
+            <span class="pill critical">Critical</span>
+          </div>
+          <p class="complaint">Loss of braking power, warning lamp on dash after cold start.</p>
+          <div class="meta"><strong>Volvo FH · VIN …4471</strong> · Brixen Truck Service</div>
+          <div class="meta">Fleet downtime cost ≈ <strong>€500 / day</strong></div>
+          <div class="divider"></div>
+          <span class="eyebrow" style="margin-bottom:10px;">Predicted parts</span>
+          <div class="part-line">
+            <span class="pn">Brake caliper, front L<small>OEM 21-55892 · Bin A-14</small></span>
+            <span class="qty">1 · in stock</span>
+          </div>
+          <div class="part-line">
+            <span class="pn">Brake pad set<small>ABC class A · local warehouse 2–4h</small></span>
+            <span class="qty">1 · reserved</span>
+          </div>
+          <div class="part-line">
+            <span class="pn">ABS sensor<small>confidence 82%</small></span>
+            <span class="qty">1 · pre-ordered</span>
+          </div>
+          <div class="divider"></div>
+          <div class="meta"><span class="pill staged">Parts staged before bay</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========================================================== Problem -->
+    <section id="problem" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">The problem</span>
+          <h2>Repair time is lost between diagnosis and parts availability</h2>
+          <p class="lede">Workshops lose hours because parts are only sourced <em>after</em> diagnostics —
+            while the bay and the technician sit blocked.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Ordered too late</h3>
+            <p>Parts are ordered only after diagnostics are complete, so the wait starts when the truck is already on the lift.</p>
+          </div>
+          <div class="card">
+            <h3>Fragmented inventory</h3>
+            <p>Stock is scattered across local warehouses, group stock and suppliers — with no single view of what is available when.</p>
+          </div>
+          <div class="card">
+            <h3>Manual search</h3>
+            <p>Staff hunt across DMS, OEM portals, catalogs, email and phone calls to find and confirm the right part.</p>
+          </div>
+        </div>
+        <div class="insight">
+          <span class="k">Field insight — Skuba, 2026-09-08</span>
+          Intake itself leaks. <strong>Phone is the dominant channel</strong>, and with regular clients the
+          call drifts — so not all of the service-relevant detail is captured. The gap starts before diagnostics even begin.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== Bottleneck -->
+    <section id="bottleneck">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">The hidden bottleneck</span>
+          <h2>Active repair is only one part of the cycle</h2>
+          <p class="lede">Two steps — parts search/order and parts wait — are where avoidable time hides.</p>
+        </div>
+        <div class="pipeline">
+          <div class="pipe-step"><span class="k">01</span>Check-in</div>
+          <div class="pipe-step"><span class="k">02</span>Triage</div>
+          <div class="pipe-step"><span class="k">03</span>Diagnostics</div>
+          <div class="pipe-step"><span class="k">04</span>Approval</div>
+          <div class="pipe-step hot"><span class="k">05</span>Parts search / order</div>
+          <div class="pipe-step hot"><span class="k">06</span>Parts wait</div>
+          <div class="pipe-step"><span class="k">07</span>Repair</div>
+          <div class="pipe-step"><span class="k">08</span>QC</div>
+          <div class="pipe-step"><span class="k">09</span>Release</div>
+        </div>
+        <p class="pipe-caption">The two <strong>highlighted steps</strong> are avoidable waiting.
+          A day of truck downtime runs ≈ €500 — the pain that pays for prediction.</p>
+        <div class="grid grid-4" style="margin-top:40px;">
+          <div class="stat-tile"><span class="eyebrow">Fleet downtime</span><p class="stat-def">Breakdown → return to service</p></div>
+          <div class="stat-tile"><span class="eyebrow">Shop TAT</span><p class="stat-def">Check-in → release</p></div>
+          <div class="stat-tile"><span class="eyebrow">Bay occupancy</span><p class="stat-def">Time in a productive bay</p></div>
+          <div class="stat-tile"><span class="eyebrow">Wrench time</span><p class="stat-def">Active technician work</p></div>
+        </div>
+        <p class="disclaimer">Measurement distinctions that matter. The 16-hour shop-TAT baseline is a pilot hypothesis, to be validated on timestamp-level workshop data.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================== Solution -->
+    <section id="solution" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">The solution</span>
+          <h2>An AI decision layer on top of the systems you already run</h2>
+          <p class="lede">The AI does the heavy lifting; the human stays in control at the business-rule gate —
+            and every finished repair feeds the model.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card tab-top"><span class="num-badge">1</span><h3>Capture</h3><p>Vehicle, mileage, symptoms, DTCs and repair history — from phone, email or intake.</p></div>
+          <div class="card tab-top"><span class="num-badge">2</span><h3>Predict</h3><p>Likely required parts with confidence scores, normalised across manufacturers.</p></div>
+          <div class="card tab-top"><span class="num-badge">3</span><h3>Check</h3><p>Local, group and supplier availability with ABC-class lead times.</p></div>
+          <div class="card tab-top"><span class="num-badge">4</span><h3>Reserve</h3><p>Reserve or pre-order parts under defined business rules — human-approved.</p></div>
+          <div class="card tab-top"><span class="num-badge">5</span><h3>Prepare</h3><p>Stage the parts before the truck reaches the productive repair bay.</p></div>
+          <div class="card tab-top"><span class="num-badge">6</span><h3>Learn</h3><p>Learn from actual diagnosis and repair outcomes to sharpen the next prediction.</p></div>
+        </div>
+        <div class="insight">
+          <span class="k">Core promise</span>
+          Reduce avoidable parts-related waiting by <strong>up to four hours per eligible repair order</strong> —
+          by predicting and reserving the part before the bay is even occupied.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== Modules -->
+    <section id="product">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Product architecture</span>
+          <h2>One connected workflow, from repair order to prepared parts</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Digital repair-order intake</h3><p>Structured capture of VIN, symptoms and history — even from a phone call.</p></div>
+          <div class="card"><h3>Predictive parts recommendation</h3><p>Confidence-scored part predictions from the prediction engine.</p></div>
+          <div class="card"><h3>Inventory &amp; supplier visibility</h3><p>Local, group and supplier stock in a single availability view.</p></div>
+          <div class="card"><h3>Reservation &amp; procurement</h3><p>Reserve, advance-order or find alternative sourcing under business rules.</p></div>
+          <div class="card"><h3>Bay scheduling &amp; staging</h3><p>Schedule the bay and stage parts so work starts without a wait.</p></div>
+          <div class="card"><h3>KPI dashboard &amp; APIs</h3><p>Operational metrics plus integration APIs into existing systems.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== Value -->
+    <section id="value" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Customer value</span>
+          <h2>Less waiting, more capacity, better predictability</h2>
+          <p class="lede">Illustrative 4-bay workshop model — a value hypothesis for pilot validation.</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="stat-tile"><span class="eyebrow">Repair orders / month</span><p class="stat-figure">88–132</p><p class="qual">Conservative to average</p></div>
+          <div class="stat-tile"><span class="eyebrow">Parts-hours saved</span><p class="stat-figure pine">352–528</p><p class="qual">Per month</p></div>
+          <div class="stat-tile"><span class="eyebrow">Throughput value</span><p class="stat-figure">€21k–32k</p><p class="qual">At €60 / hour</p></div>
+          <div class="stat-tile"><span class="eyebrow">Realized value</span><p class="stat-figure pine">€3.2k–4.8k</p><p class="qual">At 15% capacity realization</p></div>
+        </div>
+        <p class="disclaimer">These figures are a value hypothesis for pilot validation, not a guaranteed outcome. Actual impact depends on repair mix, current utilization, parts availability, and the workshop's ability to convert released capacity into additional work.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================== Positioning / flywheel -->
+    <section id="positioning">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Competitive position</span>
+          <h2>The intelligence layer between fleet and workshop systems</h2>
+          <p class="lede">Not another system of record — a predictive operating layer that makes existing systems more useful.
+            And the advantage compounds into a data flywheel.</p>
+        </div>
+        <div class="flywheel">
+          <span class="fly-node">Confirmed repair outcome</span>
+          <span class="fly-arrow">→</span>
+          <span class="fly-node store">Parts-prediction know-how</span>
+          <span class="fly-arrow">→</span>
+          <span class="fly-node ai">Sharper predictions</span>
+          <span class="fly-arrow">→</span>
+          <span class="fly-node">Fewer wrong parts · less waiting</span>
+          <span class="fly-arrow">→</span>
+          <span class="fly-node">More shops · more data</span>
+          <span class="fly-arrow">↺</span>
+        </div>
+        <div class="insight">
+          <span class="k">Field insight — Skuba, 2026-09-08</span>
+          The distributor's part-selection know-how (fault → correct part) is the real moat. Seeding Otter Work's
+          model <strong>with a distributor partner</strong> turns that know-how into a compounding, defensible asset.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== Pricing -->
+    <section id="pricing" class="alt">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow">Business model</span>
+          <h2>Simple pricing aligned with workshop size</h2>
+        </div>
+        <div class="price-grid">
+          <div class="price">
+            <span class="plan">Pilot</span>
+            <span class="size">Up to 4 bays</span>
+            <span class="amt">€199<small> / mo</small></span>
+          </div>
+          <div class="price featured">
+            <span class="plan">Professional</span>
+            <span class="size">3–5 bays</span>
+            <span class="amt">€399<small> / mo</small></span>
+          </div>
+          <div class="price">
+            <span class="plan">Growth</span>
+            <span class="size">6–10 bays</span>
+            <span class="amt">€699<small> / mo</small></span>
+          </div>
+          <div class="price">
+            <span class="plan">Enterprise</span>
+            <span class="size">10+ bays / multi-location</span>
+            <span class="amt custom">Custom</span>
+          </div>
+        </div>
+        <p class="disclaimer" style="text-align:center; margin-left:auto; margin-right:auto;">Additional revenue: implementation and data preparation (€1,500–5,000 per workshop) · custom integrations · premium SLA and support · group-level analytics and benchmarking.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================== KPIs -->
+    <section id="kpis">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Pilot KPIs</span>
+          <h2>Success means measurable operational improvement</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>KPI</th><th class="r">Six-month target</th></tr></thead>
+            <tbody>
+              <tr><td>Shop TAT for eligible repair cohorts</td><td class="r">20–37.5% reduction</td></tr>
+              <tr><td>Parts waiting time</td><td class="r">30–60% reduction</td></tr>
+              <tr><td>First-attempt parts availability</td><td class="r">+10–20 pts</td></tr>
+              <tr><td>Productive-bay blockage waiting for parts</td><td class="r">25–40% reduction</td></tr>
+              <tr><td>Parts recommendation precision</td><td class="r">70%+ in priority categories</td></tr>
+              <tr><td>First-time-fix rate</td><td class="r">+5–10 pts</td></tr>
+              <tr><td>Technician productive time</td><td class="r">+10–20%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="disclaimer">Otter Work will not claim that every repair moves from 16 to 10 hours. It will prove where parts prediction creates measurable improvement.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================== Founders -->
+    <section id="founders" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Founders</span>
+          <h2>Domain expertise plus implementation-grade AI capability</h2>
+        </div>
+        <div class="grid grid-2">
+          <div class="founder">
+            <div class="avatar">GK</div>
+            <div>
+              <h3>Gintaras Kruckas</h3>
+              <div class="role">Co-founder</div>
+              <ul>
+                <li>Spare-parts management experience at MTTC.</li>
+                <li>Practical understanding of parts availability, procurement and workshop operations.</li>
+                <li>Translates operational bottlenecks into business requirements.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="founder">
+            <div class="avatar">IS</div>
+            <div>
+              <h3>Ignas Savickas</h3>
+              <div class="role">Co-founder &amp; technology lead</div>
+              <ul>
+                <li>IT professional implementing MTTC operational achievements.</li>
+                <li>Currently deploying AI solutions in production.</li>
+                <li>Leads product architecture, AI/ML, integrations and data-driven process improvement.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== CTA / contact -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="cta">
+          <span class="eyebrow" style="color:#E7EFEA;">Truck Service Innovation Hub — 12-month program</span>
+          <h2>Otter Work makes repair faster, more predictable, and easier to scale</h2>
+          <p>We are validating predictive parts availability in live workshops — reducing avoidable waiting,
+            improving bay throughput, and building a scalable B2B SaaS platform for Europe's repair ecosystem.</p>
+          <div class="hero-cta" style="justify-content:center;">
+            <a class="btn btn-primary" href="mailto:ignas.savickas@tenging.is?subject=Otter%20Work%20pilot%20enquiry">Request a pilot</a>
+            <a class="btn btn-secondary" href="mailto:ignas.savickas@tenging.is?subject=Otter%20Work%20partnership">Partner with us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="lockup" href="#top">
+          <img src="assets/img/otter.svg" alt="" style="height:28px;" />
+          <span class="name">Otter Work</span>
+        </a>
+        <p class="tag">Predictive parts availability for truck workshops. Work flows better.</p>
+      </div>
+      <div class="foot-meta">
+        <p>Founders: Gintaras Kruckas &amp; Ignas Savickas</p>
+        <p><a href="mailto:ignas.savickas@tenging.is">ignas.savickas@tenging.is</a></p>
+        <p>© <span id="yr">2026</span> Otter Work</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    (function () {
+      var t = document.querySelector('.nav-toggle');
+      var n = document.querySelector('.nav');
+      if (t && n) {
+        t.addEventListener('click', function () {
+          var open = n.classList.toggle('open');
+          t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        n.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') { n.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }
+        });
+      }
+      document.getElementById('yr').textContent = new Date().getFullYear();
+    })();
+  </script>
+
+</body>
+</html>
