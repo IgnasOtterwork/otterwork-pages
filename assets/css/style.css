@@ -326,19 +326,6 @@ tbody tr.highlight td { background: var(--sl-brass-wash); color: var(--sl-ink); 
 .fly-node.store { background: var(--sl-surface-sunk); border-color: var(--sl-border-strong); color: var(--sl-ink); }
 .fly-arrow { color: var(--sl-tobacco); font-size: 18px; }
 
-/* ------------------------------------------------------------------ Founders */
-.founder { display: flex; gap: 18px; align-items: flex-start; }
-.avatar {
-  flex: 0 0 auto; width: 54px; height: 54px; border-radius: 50%;
-  background: var(--sl-pine); color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--sans); font-weight: 700; font-size: 19px;
-}
-.founder h3 { font-size: 20px; margin-bottom: 2px; }
-.founder .role { font-family: var(--sans); font-size: 13px; color: var(--sl-brass-ink); font-weight: 600; margin-bottom: 10px; }
-.founder ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--sl-ink-2); }
-.founder li { margin-bottom: 4px; }
-
 /* ------------------------------------------------------------------ CTA band */
 .cta {
   background: var(--sl-pine);
@@ -399,5 +386,4 @@ tbody tr.highlight td { background: var(--sl-brass-wash); color: var(--sl-ink); 
     font-size: 24px; color: var(--sl-ink); cursor: pointer; line-height: 1;
   }
   .cta { padding: 40px 24px; }
-  .founder { flex-direction: column; }
 }
