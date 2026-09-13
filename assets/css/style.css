@@ -155,6 +155,7 @@ img, svg { max-width: 100%; }
 }
 .nav a:hover { color: var(--sl-pine); text-decoration: none; }
 .nav .btn { padding: 9px 16px; font-size: 14px; }
+.nav a.btn-primary, .nav a.btn-primary:hover { color: #fff; }
 .nav-toggle { display: none; }
 
 /* ------------------------------------------------------------------ Sections */
@@ -363,6 +364,67 @@ tbody tr.highlight td { background: var(--sl-brass-wash); color: var(--sl-ink); 
 
 .disclaimer { font-size: 12px; color: var(--sl-ink-3); margin-top: 20px; max-width: 76ch; }
 
+/* ------------------------------------------------------------------ Product tour / slideshow */
+.shots { position: relative; margin-top: 8px; }
+.shots-viewport { overflow: hidden; border-radius: 14px; }
+.shots-track { display: flex; transition: transform .45s cubic-bezier(.4, 0, .2, 1); }
+.shot { flex: 0 0 100%; min-width: 0; padding: 0 2px; }
+.shot-frame {
+  background: var(--sl-surface);
+  border: 1px solid var(--sl-border);
+  border-top: 3px solid var(--sl-pine);
+  border-radius: 12px;
+  box-shadow: var(--sh-card);
+  overflow: hidden;
+}
+.shot-bar {
+  display: flex; align-items: center; gap: 7px;
+  padding: 11px 14px;
+  background: var(--sl-surface-sunk);
+  border-bottom: 1px solid var(--sl-border);
+}
+.shot-bar span { width: 10px; height: 10px; border-radius: 50%; background: var(--sl-border-strong); }
+.shot-bar span:nth-child(1) { background: #D9A79A; }
+.shot-bar span:nth-child(2) { background: #E5D3A8; }
+.shot-bar span:nth-child(3) { background: #B9D0C5; }
+.shot-bar .shot-url {
+  margin-left: 8px; font-family: var(--sans); font-size: 12px; color: var(--sl-ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.shot-frame img {
+  display: block; width: 100%; height: auto; aspect-ratio: 2000 / 1160;
+  object-fit: cover; object-position: top center; background: var(--sl-paper);
+}
+.shot figcaption {
+  margin: 16px 4px 0; text-align: center;
+  font-family: var(--serif); font-size: 19px; color: var(--sl-ink); line-height: 1.35;
+}
+.shot figcaption small {
+  display: block; margin-top: 5px;
+  font-family: var(--sans); font-size: 13px; color: var(--sl-ink-3);
+}
+.shots-nav {
+  position: absolute; top: calc(50% - 24px); transform: translateY(-50%);
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--sl-surface); border: 1px solid var(--sl-border-strong);
+  color: var(--sl-ink); font-size: 20px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--sh-tile); transition: border-color .12s ease, transform .12s ease;
+  z-index: 2;
+}
+.shots-nav:hover { border-color: var(--sl-pine); color: var(--sl-pine); }
+.shots-nav:active { transform: translateY(-50%) scale(.94); }
+.shots-nav.prev { left: -10px; }
+.shots-nav.next { right: -10px; }
+.shots-nav:focus-visible { outline: 2px solid var(--sl-brass); outline-offset: 2px; }
+.shots-dots { display: flex; justify-content: center; gap: 8px; margin-top: 20px; }
+.shots-dots button {
+  width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%;
+  background: var(--sl-border-strong); cursor: pointer; transition: background .15s ease, width .15s ease;
+}
+.shots-dots button[aria-current="true"] { background: var(--sl-pine); width: 22px; border-radius: 20px; }
+.shots-dots button:focus-visible { outline: 2px solid var(--sl-brass); outline-offset: 2px; }
+
 /* ------------------------------------------------------------------ Responsive */
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -386,4 +448,7 @@ tbody tr.highlight td { background: var(--sl-brass-wash); color: var(--sl-ink); 
     font-size: 24px; color: var(--sl-ink); cursor: pointer; line-height: 1;
   }
   .cta { padding: 40px 24px; }
+  .shots-nav.prev { left: 6px; }
+  .shots-nav.next { right: 6px; }
+  .shot figcaption { font-size: 16px; }
 }
