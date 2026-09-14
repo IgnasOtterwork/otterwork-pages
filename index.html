@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=3" />
 </head>
 <body>
 
@@ -30,6 +30,8 @@
         <a href="#problem">Problem</a>
         <a href="#solution">Solution</a>
         <a href="#tour">Product</a>
+        <a href="#automation">Automation</a>
+        <a href="#integrations">Integrations</a>
         <a href="#value">Value</a>
         <a href="#pricing">Pricing</a>
         <a class="btn btn-primary" href="#contact">Request a pilot</a>
@@ -272,6 +274,157 @@
       </div>
     </section>
 
+    <!-- ========================================================== Automation / AI agents -->
+    <section id="automation">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Automation</span>
+          <h2>An AI copilot that does the parts busywork — you keep the final say</h2>
+          <p class="lede">Otter Work doesn't just show you the plan. Conversational agents build the replenishment plan,
+            draft the purchase orders and receive stock — and every money-moving action waits for a human tap to approve.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card tab-top">
+            <span class="path-k"><span class="pine">Agent</span> · replenishment</span>
+            <h3>Replenishment copilot</h3>
+            <p>Ask for a demand- or usage-based plan for the location, get the key SKUs and total spend summarised, then
+              have it draft purchase orders grouped by vendor — reviewed and released by you.</p>
+          </div>
+          <div class="card tab-top">
+            <span class="path-k"><span class="pine">Agent</span> · purchasing</span>
+            <h3>Purchase-order copilot</h3>
+            <p>List, place and receive purchase orders by reference in plain language. Placing an order with the supplier
+              and receiving it into stock are one message away — each confirmed before it is written.</p>
+          </div>
+          <div class="card tab-top">
+            <span class="path-k"><span class="pine">Guardrail</span> · human-in-the-loop</span>
+            <h3>Drafts, never autonomous spend</h3>
+            <p>Every write is an explicit approval, never a silent purchase. Receiving ledgers each stock movement, so the
+              next usage-based forecast only gets sharper.</p>
+          </div>
+        </div>
+        <div class="insight">
+          <span class="k">Why it matters</span>
+          The stock manager stops assembling spreadsheets and starts approving decisions — the AI drafts, the human commits.
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== Integrations -->
+    <section id="integrations" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Integrations &amp; API</span>
+          <h2>Open by default — built to fit the systems you already run</h2>
+          <p class="lede">No rip-and-replace. Otter Work sits on top of your DMS, telematics and back office —
+            and you choose how deep to connect, from a simple CSV to a live, two-way API. Start where you are today,
+            upgrade whenever it suits you.</p>
+        </div>
+
+        <div class="grid grid-2 paths">
+          <div class="card tab-top pine">
+            <span class="path-k"><span class="pine">Path 1 · Simplest</span> · for legacy systems</span>
+            <h3>Start with CSV &amp; spreadsheets</h3>
+            <p>No IT project and no developers. Bulk-import your catalog, stock levels and part substitutions from a
+              spreadsheet, and export replenishment plans and accounting to CSV for the tools you already run.
+              The right fit for shops on legacy or offline systems.</p>
+            <div class="tag-row">
+              <span class="tag">Catalog import</span>
+              <span class="tag">Stock import</span>
+              <span class="tag">Substitutions import</span>
+              <span class="tag">Replenishment export</span>
+              <span class="tag">Accounting export</span>
+            </div>
+          </div>
+          <div class="card tab-top">
+            <span class="path-k"><b>Path 2 · Fully automated</b> · for connected shops</span>
+            <h3>Go live with the API &amp; webhooks</h3>
+            <p>When you are ready for real time, the same data flows both ways over a tenant-scoped API — telematics
+              faults raise leads on their own, and every status change is pushed straight to your systems.
+              Same platform, no migration; flip it on whenever it suits you.</p>
+            <div class="tag-row">
+              <span class="tag">REST · OData · GraphQL</span>
+              <span class="tag">Telematics inbound</span>
+              <span class="tag">Status webhooks</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="bridge">Inside the live connection</p>
+
+        <div class="grid grid-3">
+
+          <div class="card tab-top">
+            <span class="io-badge" aria-hidden="true">↓</span>
+            <h3>Work flows in on its own</h3>
+            <p>A DTC fault from a connected truck becomes a service lead automatically — with the odometer kept
+              current so preventive-maintenance scheduling stays accurate. Every intake channel lands on the same board.</p>
+            <div class="tag-row">
+              <span class="tag">Telematics / DTC</span>
+              <span class="tag">Preventive maintenance</span>
+              <span class="tag">Phone &amp; walk-in</span>
+              <span class="tag">Online booking</span>
+              <span class="tag">Roadside</span>
+            </div>
+          </div>
+
+          <div class="card tab-top">
+            <span class="io-badge" aria-hidden="true">⇄</span>
+            <h3>One API key, three query styles</h3>
+            <p>A single tenant-scoped key unlocks the same data — orders, catalog, stock, purchase orders, vehicles
+              and substitutions — however your integration prefers to read and write it.</p>
+            <ul class="feature-list">
+              <li><b>REST</b> — full read/write CRUD for booking, catalog and stock sync</li>
+              <li><b>OData</b> — queryable feeds straight into Power&nbsp;BI, Excel &amp; reporting</li>
+              <li><b>GraphQL</b> — shaped, nested queries for custom apps and dashboards</li>
+              <li>Documented with OpenAPI, an interactive explorer, and self-serve keys you can revoke anytime</li>
+            </ul>
+          </div>
+
+          <div class="card tab-top">
+            <span class="io-badge" aria-hidden="true">↑</span>
+            <h3>Events flow back out</h3>
+            <p>Register a webhook and Otter Work POSTs a JSON event the moment a service order changes status — so your
+              DMS, ERP, accounting and notification tools stay in sync in real time.</p>
+            <div class="tag-row">
+              <span class="tag">Status-change webhooks</span>
+              <span class="tag">Delivery tracking</span>
+              <span class="tag">One-click test sends</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="api-strip" aria-label="API endpoints">
+          <span class="label">Authenticated with <span class="mono">X-Api-Key</span></span>
+          <span class="api-chip"><b>GET</b> /api/v1/orders</span>
+          <span class="api-chip"><b>GET</b> /api/odata/Stock</span>
+          <span class="api-chip"><b>POST</b> /graphql</span>
+          <span class="api-chip"><b>POST</b> /api/v1/telematics/faults</span>
+        </div>
+
+        <div class="insight">
+          <span class="k">Why API-first</span>
+          The intelligence layer between fleet, telematics and workshop systems — so an independent shop gets the same
+          data leverage as a large fleet, without swapping out a single tool it already relies on.
+        </div>
+
+        <div class="roadmap">
+          <span class="path-k">On the roadmap · packaged connectors</span>
+          <div class="tag-row">
+            <span class="tag soon">TecDoc / TecAlliance catalog</span>
+            <span class="tag soon">VIN → vehicle decoding</span>
+            <span class="tag soon">DMS connectors</span>
+            <span class="tag soon">ERP &amp; accounting</span>
+            <span class="tag soon">Telematics &amp; OEM feeds</span>
+          </div>
+          <p class="disclaimer">Authoritative European parts data (TecDoc / TecAlliance) and packaged DMS, ERP and telematics
+            connectors are on the roadmap. Today you connect through CSV or the open API above — the pipeline is built to drop
+            these in as they land, with no change to how you work.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- ========================================================== Value -->
     <section id="value">
       <div class="wrap">
@@ -287,6 +440,38 @@
           <div class="stat-tile"><span class="eyebrow">Realized value</span><p class="stat-figure pine">€3.2k–4.8k</p><p class="qual">At 15% capacity realization</p></div>
         </div>
         <p class="disclaimer">These figures are a value hypothesis for pilot validation, not a guaranteed outcome. Actual impact depends on repair mix, current utilization, parts availability, and the workshop's ability to convert released capacity into additional work.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================== Beyond efficiency -->
+    <section id="more" class="alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">More than efficiency</span>
+          <h2>Faster repairs are just the start</h2>
+          <p class="lede">The same data that stages parts on time also grows the top line, keeps trucks moving when a part
+            is short, and scales from a single shop to a whole network.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card tab-top">
+            <span class="path-k"><span class="pine">Grow revenue</span></span>
+            <h3>Turn maintenance-due trucks into booked work</h3>
+            <p>Otter Work watches every enrolled vehicle's mileage and time since last service and flags the ones due —
+              one click turns them into leads on the order board. Fill the bays you would otherwise leave empty.</p>
+          </div>
+          <div class="card tab-top">
+            <span class="path-k"><span class="pine">Stay unblocked</span></span>
+            <h3>Never stuck on a single part</h3>
+            <p>When the primary SKU is short, the availability engine offers interchangeable substitutes automatically —
+              so one out-of-stock line doesn't leave a truck sitting on the lift.</p>
+          </div>
+          <div class="card tab-top">
+            <span class="path-k"><span class="pine">Scale up</span></span>
+            <h3>One shop or a whole group</h3>
+            <p>Stock, bays, orders and purchasing are location-aware, with shared items spanning sites — run a single
+              workshop or a multi-location network on one platform, with group-wide visibility.</p>
+          </div>
+        </div>
       </div>
     </section>
 
