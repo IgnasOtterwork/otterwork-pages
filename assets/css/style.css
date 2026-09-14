@@ -493,6 +493,14 @@ tbody tr.highlight td { background: var(--sl-brass-wash); color: var(--sl-ink); 
 }
 .api-chip b { color: var(--sl-brass-ink); font-weight: 700; }
 
+.roadmap { margin-top: 26px; }
+.roadmap .path-k { margin-bottom: 10px; }
+.tag.soon {
+  background: transparent; color: var(--sl-ink-3);
+  border-style: dashed; border-color: var(--sl-border-strong);
+}
+.roadmap .disclaimer { margin-top: 12px; }
+
 /* ------------------------------------------------------------------ Responsive */
 @media (max-width: 960px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }

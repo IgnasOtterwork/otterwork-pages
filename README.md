@@ -15,7 +15,7 @@ pine/brass palette, layered warm shadows, and the otter-and-wrench mascot.
 ## Structure
 
 ```
-index.html            Single-page landing (hero → problem → solution → product → tour → integrations → value → pricing → CTA)
+index.html            Single-page landing (hero → problem → solution → product → tour → automation → integrations → value → beyond → pricing → CTA)
 assets/css/style.css  Depot design tokens + components
 assets/img/otter.svg  Otter mascot (from the product brand assets)
 assets/img/favicon.svg
