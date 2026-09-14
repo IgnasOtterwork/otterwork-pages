@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=2" />
 </head>
 <body>
 
@@ -30,6 +30,7 @@
         <a href="#problem">Problem</a>
         <a href="#solution">Solution</a>
         <a href="#tour">Product</a>
+        <a href="#integrations">Integrations</a>
         <a href="#value">Value</a>
         <a href="#pricing">Pricing</a>
         <a class="btn btn-primary" href="#contact">Request a pilot</a>
@@ -268,6 +269,107 @@
           <button class="shots-nav prev" type="button" aria-label="Previous screenshot">‹</button>
           <button class="shots-nav next" type="button" aria-label="Next screenshot">›</button>
           <div class="shots-dots" role="tablist" aria-label="Choose screenshot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== Integrations -->
+    <section id="integrations">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Integrations &amp; API</span>
+          <h2>Open by default — built to fit the systems you already run</h2>
+          <p class="lede">No rip-and-replace. Otter Work sits on top of your DMS, telematics and back office —
+            and you choose how deep to connect, from a simple CSV to a live, two-way API. Start where you are today,
+            upgrade whenever it suits you.</p>
+        </div>
+
+        <div class="grid grid-2 paths">
+          <div class="card tab-top pine">
+            <span class="path-k"><span class="pine">Path 1 · Simplest</span> · for legacy systems</span>
+            <h3>Start with CSV &amp; spreadsheets</h3>
+            <p>No IT project and no developers. Bulk-import your catalog, stock levels and part substitutions from a
+              spreadsheet, and export replenishment plans and accounting to CSV for the tools you already run.
+              The right fit for shops on legacy or offline systems.</p>
+            <div class="tag-row">
+              <span class="tag">Catalog import</span>
+              <span class="tag">Stock import</span>
+              <span class="tag">Substitutions import</span>
+              <span class="tag">Replenishment export</span>
+              <span class="tag">Accounting export</span>
+            </div>
+          </div>
+          <div class="card tab-top">
+            <span class="path-k"><b>Path 2 · Fully automated</b> · for connected shops</span>
+            <h3>Go live with the API &amp; webhooks</h3>
+            <p>When you are ready for real time, the same data flows both ways over a tenant-scoped API — telematics
+              faults raise leads on their own, and every status change is pushed straight to your systems.
+              Same platform, no migration; flip it on whenever it suits you.</p>
+            <div class="tag-row">
+              <span class="tag">REST · OData · GraphQL</span>
+              <span class="tag">Telematics inbound</span>
+              <span class="tag">Status webhooks</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="bridge">Inside the live connection</p>
+
+        <div class="grid grid-3">
+
+          <div class="card tab-top">
+            <span class="io-badge" aria-hidden="true">↓</span>
+            <h3>Work flows in on its own</h3>
+            <p>A DTC fault from a connected truck becomes a service lead automatically — with the odometer kept
+              current so preventive-maintenance scheduling stays accurate. Every intake channel lands on the same board.</p>
+            <div class="tag-row">
+              <span class="tag">Telematics / DTC</span>
+              <span class="tag">Preventive maintenance</span>
+              <span class="tag">Phone &amp; walk-in</span>
+              <span class="tag">Online booking</span>
+              <span class="tag">Roadside</span>
+            </div>
+          </div>
+
+          <div class="card tab-top">
+            <span class="io-badge" aria-hidden="true">⇄</span>
+            <h3>One API key, three query styles</h3>
+            <p>A single tenant-scoped key unlocks the same data — orders, catalog, stock, purchase orders, vehicles
+              and substitutions — however your integration prefers to read and write it.</p>
+            <ul class="feature-list">
+              <li><b>REST</b> — full read/write CRUD for booking, catalog and stock sync</li>
+              <li><b>OData</b> — queryable feeds straight into Power&nbsp;BI, Excel &amp; reporting</li>
+              <li><b>GraphQL</b> — shaped, nested queries for custom apps and dashboards</li>
+              <li>Documented with OpenAPI, an interactive explorer, and self-serve keys you can revoke anytime</li>
+            </ul>
+          </div>
+
+          <div class="card tab-top">
+            <span class="io-badge" aria-hidden="true">↑</span>
+            <h3>Events flow back out</h3>
+            <p>Register a webhook and Otter Work POSTs a JSON event the moment a service order changes status — so your
+              DMS, ERP, accounting and notification tools stay in sync in real time.</p>
+            <div class="tag-row">
+              <span class="tag">Status-change webhooks</span>
+              <span class="tag">Delivery tracking</span>
+              <span class="tag">One-click test sends</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="api-strip" aria-label="API endpoints">
+          <span class="label">Authenticated with <span class="mono">X-Api-Key</span></span>
+          <span class="api-chip"><b>GET</b> /api/v1/orders</span>
+          <span class="api-chip"><b>GET</b> /api/odata/Stock</span>
+          <span class="api-chip"><b>POST</b> /graphql</span>
+          <span class="api-chip"><b>POST</b> /api/v1/telematics/faults</span>
+        </div>
+
+        <div class="insight">
+          <span class="k">Why API-first</span>
+          The intelligence layer between fleet, telematics and workshop systems — so an independent shop gets the same
+          data leverage as a large fleet, without swapping out a single tool it already relies on.
         </div>
       </div>
     </section>
