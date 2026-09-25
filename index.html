@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
 </head>
 <body>
 
@@ -141,7 +141,7 @@
           <div class="stat-tile"><span class="eyebrow">Bay occupancy</span><p class="stat-def">Time in a productive bay</p></div>
           <div class="stat-tile"><span class="eyebrow">Wrench time</span><p class="stat-def">Active technician work</p></div>
         </div>
-        <p class="disclaimer">Measurement distinctions that matter. The 16-hour shop-TAT baseline is a pilot hypothesis, to be validated on timestamp-level workshop data.</p>
+        <p class="disclaimer">Measurement distinctions that matter. The 15% shop-turnaround-time improvement is a pilot hypothesis drawn from smartphone-repair workshop experience — not a Europe-wide audited benchmark — to be validated on timestamp-level data, with shop TAT reported separately from fleet downtime, bay occupancy and technician wrench time.</p>
       </div>
     </section>
 
@@ -164,7 +164,8 @@
         </div>
         <div class="insight">
           <span class="k">Core promise</span>
-          Reduce avoidable parts-related waiting by <strong>up to four hours per eligible repair order</strong> —
+          Reduce avoidable parts-related waiting by <strong>up to three hours per eligible repair order</strong> —
+          lifting bay and technician utilization by around <strong>15%</strong> and handing the truck owner shorter downtime,
           by predicting and reserving the part before the bay is even occupied.
         </div>
       </div>
@@ -328,12 +329,12 @@
             <p>No IT project and no developers. Bulk-import your catalog, stock levels and part substitutions from a
               spreadsheet, and export replenishment plans and accounting to CSV for the tools you already run.
               The right fit for shops on legacy or offline systems.</p>
-            <div class="tag-row">
-              <span class="tag">Catalog import</span>
-              <span class="tag">Stock import</span>
-              <span class="tag">Substitutions import</span>
-              <span class="tag">Replenishment export</span>
-              <span class="tag">Accounting export</span>
+            <div class="chip-row">
+              <span class="chip">Catalog import</span>
+              <span class="chip">Stock import</span>
+              <span class="chip">Substitutions import</span>
+              <span class="chip">Replenishment export</span>
+              <span class="chip">Accounting export</span>
             </div>
           </div>
           <div class="card tab-top">
@@ -342,10 +343,10 @@
             <p>When you are ready for real time, the same data flows both ways over a tenant-scoped API — telematics
               faults raise leads on their own, and every status change is pushed straight to your systems.
               Same platform, no migration; flip it on whenever it suits you.</p>
-            <div class="tag-row">
-              <span class="tag">REST · OData · GraphQL</span>
-              <span class="tag">Telematics inbound</span>
-              <span class="tag">Status webhooks</span>
+            <div class="chip-row">
+              <span class="chip">REST · OData · GraphQL</span>
+              <span class="chip">Telematics inbound</span>
+              <span class="chip">Status webhooks</span>
             </div>
           </div>
         </div>
@@ -359,12 +360,12 @@
             <h3>Work flows in on its own</h3>
             <p>A DTC fault from a connected truck becomes a service lead automatically — with the odometer kept
               current so preventive-maintenance scheduling stays accurate. Every intake channel lands on the same board.</p>
-            <div class="tag-row">
-              <span class="tag">Telematics / DTC</span>
-              <span class="tag">Preventive maintenance</span>
-              <span class="tag">Phone &amp; walk-in</span>
-              <span class="tag">Online booking</span>
-              <span class="tag">Roadside</span>
+            <div class="chip-row">
+              <span class="chip">Telematics / DTC</span>
+              <span class="chip">Preventive maintenance</span>
+              <span class="chip">Phone &amp; walk-in</span>
+              <span class="chip">Online booking</span>
+              <span class="chip">Roadside</span>
             </div>
           </div>
 
@@ -386,10 +387,10 @@
             <h3>Events flow back out</h3>
             <p>Register a webhook and Otter Work POSTs a JSON event the moment a service order changes status — so your
               DMS, ERP, accounting and notification tools stay in sync in real time.</p>
-            <div class="tag-row">
-              <span class="tag">Status-change webhooks</span>
-              <span class="tag">Delivery tracking</span>
-              <span class="tag">One-click test sends</span>
+            <div class="chip-row">
+              <span class="chip">Status-change webhooks</span>
+              <span class="chip">Delivery tracking</span>
+              <span class="chip">One-click test sends</span>
             </div>
           </div>
 
@@ -411,12 +412,12 @@
 
         <div class="roadmap">
           <span class="path-k">On the roadmap · packaged connectors</span>
-          <div class="tag-row">
-            <span class="tag soon">TecDoc / TecAlliance catalog</span>
-            <span class="tag soon">VIN → vehicle decoding</span>
-            <span class="tag soon">DMS connectors</span>
-            <span class="tag soon">ERP &amp; accounting</span>
-            <span class="tag soon">Telematics &amp; OEM feeds</span>
+          <div class="chip-row">
+            <span class="chip soon">TecDoc / TecAlliance catalog</span>
+            <span class="chip soon">VIN → vehicle decoding</span>
+            <span class="chip soon">DMS connectors</span>
+            <span class="chip soon">ERP &amp; accounting</span>
+            <span class="chip soon">Telematics &amp; OEM feeds</span>
           </div>
           <p class="disclaimer">Authoritative European parts data (TecDoc / TecAlliance) and packaged DMS, ERP and telematics
             connectors are on the roadmap. Today you connect through CSV or the open API above — the pipeline is built to drop
@@ -431,15 +432,21 @@
         <div class="section-head">
           <span class="eyebrow">Customer value</span>
           <h2>Less waiting, more capacity, better predictability</h2>
-          <p class="lede">Illustrative 4-bay workshop model — a value hypothesis for pilot validation.</p>
+          <p class="lede">Illustrative four-bay workshop, 90–100 repair orders a month — a value hypothesis for pilot validation.</p>
         </div>
         <div class="grid grid-4">
-          <div class="stat-tile"><span class="eyebrow">Repair orders / month</span><p class="stat-figure">88–132</p><p class="qual">Conservative to average</p></div>
-          <div class="stat-tile"><span class="eyebrow">Parts-hours saved</span><p class="stat-figure pine">352–528</p><p class="qual">Per month</p></div>
-          <div class="stat-tile"><span class="eyebrow">Throughput value</span><p class="stat-figure">€21k–32k</p><p class="qual">At €60 / hour</p></div>
-          <div class="stat-tile"><span class="eyebrow">Realized value</span><p class="stat-figure pine">€3.2k–4.8k</p><p class="qual">At 15% capacity realization</p></div>
+          <div class="stat-tile"><span class="eyebrow">Repair orders / month</span><p class="stat-figure">90–100</p><p class="qual">Typical four-bay workshop</p></div>
+          <div class="stat-tile"><span class="eyebrow">Utilization uplift</span><p class="stat-figure pine">15%</p><p class="qual">Bay &amp; technician time</p></div>
+          <div class="stat-tile"><span class="eyebrow">Extra repairs / month</span><p class="stat-figure">12–15</p><p class="qual">≈ €450 contribution each</p></div>
+          <div class="stat-tile"><span class="eyebrow">Value captured / month</span><p class="stat-figure pine">€5.4k–6.75k</p><p class="qual">Higher throughput &amp; reliability</p></div>
         </div>
-        <p class="disclaimer">These figures are a value hypothesis for pilot validation, not a guaranteed outcome. Actual impact depends on repair mix, current utilization, parts availability, and the workshop's ability to convert released capacity into additional work.</p>
+        <div class="insight">
+          <span class="k">Both sides win</span>
+          The workshop captures <strong>€5,400–6,750 a month</strong> in additional contribution — through higher throughput,
+          lower backlog and better delivery reliability — while the truck owner gets <strong>up to three hours less downtime</strong>
+          per repair, the reliability edge that wins the next booking.
+        </div>
+        <p class="disclaimer">These figures are a value hypothesis for pilot validation, not a guaranteed outcome — the 15% utilization uplift is drawn from smartphone-repair workshop experience and will be validated on timestamp-level data. Actual impact depends on repair mix, current utilization, parts availability, and the workshop's ability to convert released capacity into additional work.</p>
       </div>
     </section>
 
