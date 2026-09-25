@@ -463,8 +463,8 @@ tbody tr.highlight td { background: var(--sl-brass-wash); color: var(--sl-ink); 
 .feature-list li b { color: var(--sl-ink); font-weight: 600; }
 .feature-list li .mono { color: var(--sl-brass-ink); }
 
-.tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
-.tag {
+.chip-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.chip {
   font-family: var(--sans); font-size: 12px; font-weight: 500;
   color: var(--sl-ink-2); background: var(--sl-chip-ground);
   border: 1px solid var(--sl-border-strong); border-radius: 20px;
@@ -495,7 +495,7 @@ tbody tr.highlight td { background: var(--sl-brass-wash); color: var(--sl-ink); 
 
 .roadmap { margin-top: 26px; }
 .roadmap .path-k { margin-bottom: 10px; }
-.tag.soon {
+.chip.soon {
   background: transparent; color: var(--sl-ink-3);
   border-style: dashed; border-color: var(--sl-border-strong);
 }
